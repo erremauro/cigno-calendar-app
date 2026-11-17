@@ -1,0 +1,36 @@
+{
+	"name": "cigno-calendar-app",
+	"version": "0.1.0",
+	"private": true,
+	"type": "module",
+	"imports": {
+		"#lib": "./src/lib/index.js",
+		"#lib/*": "./src/lib/*"
+	},
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync || echo ''",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"test": "vitest run",
+		"icons": "node scripts/make-icons.mjs",
+		"deploy": "npm run build && rsync -az --delete build/ root@cigno.app:/var/www/html/calendar/ && ssh root@cigno.app 'chown -R apache:apache /var/www/html/calendar && restorecon -R /var/www/html/calendar'"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "^8.0.0",
+		"@sveltejs/adapter-static": "^4.0.1",
+		"@sveltejs/kit": "^3.0.0",
+		"@sveltejs/vite-plugin-svelte": "^7.2.0",
+		"sharp": "^0.35.5",
+		"svelte": "^5.57.2",
+		"svelte-check": "^4.6.0",
+		"typescript": "^6.0.3",
+		"vite": "^8.3.0",
+		"vitest": "^4.1.12"
+	},
+	"dependencies": {
+		"astronomy-engine": "^2.1.19"
+	}
+}

@@ -1,0 +1,29 @@
+node_modules
+
+# Output
+.output
+.vercel
+.netlify
+.wrangler
+/.svelte-kit
+/build
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*
+!.env.example
+!.env.test
+
+# Vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# Testo I Ching generato da scripts/import_iching.py, non va pubblicato
+src/lib/iching/testo/
+
+# Cache dello scaricamento dal NAOJ (scripts/fetch_naoj.py)
+scripts/.naoj-cache/

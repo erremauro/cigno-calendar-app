@@ -1,0 +1,57 @@
+<script lang="ts">
+	/** Logo ufficiale di Cigno Zen (dal tema WordPress cigno-zen, parts/svg/site-logo.php). */
+	let { width = 42, label = 'Cigno Zen' }: { width?: number; label?: string } = $props();
+</script>
+
+<svg
+	class="site-logo"
+	xmlns="http://www.w3.org/2000/svg"
+	viewBox="0 0 1634 1224"
+	{width}
+	height={(width * 1224) / 1634}
+	role={label ? 'img' : undefined}
+	aria-label={label || undefined}
+	aria-hidden={label ? undefined : 'true'}
+>
+	<g transform="matrix(1,0,0,1,-955.042123,-1159.658413)">
+		<g transform="matrix(5.444076,0,0,5.444076,-4701.352982,-7790.402754)">
+			<path class="logo-c1" d="M1127.315,1644L1114.669,1673.906L1088.745,1731.009L1046,1817L1112.119,1791L1150,1684L1127.315,1644Z" />
+			<path class="logo-c2" d="M1114.669,1673.906L1150,1684L1090,1730L1114.669,1673.906Z" />
+			<path class="logo-c3" d="M1046,1817L1132,1778L1136,1781L1098,1864L1078,1855" />
+			<path class="logo-c4" d="M1285,1728L1319,1718L1279,1797L1339,1787L1252,1860L1231,1864L1285,1728Z" />
+			<path class="logo-c5" d="M1276,1753.937L1252,1827L1243.157,1839L1252.574,1860.018L1232,1864L1276,1753.937Z" />
+			<path class="logo-c6" d="M1136,1781L1290,1721L1241.157,1838L1136,1781Z" />
+			<path class="logo-c7" d="M1136,1781L1241.157,1838L1232,1864L1223,1864L1136,1781Z" />
+			<path class="logo-c8" d="M1098,1864L1136,1781C1136,1781 1217.531,1858.859 1223,1864C1195.753,1872.762 1106.02,1867.623 1098,1864Z" />
+			<path class="logo-c9" d="M1131,1778L1294,1697L1284,1724L1136,1781L1131,1778Z" />
+			<path class="logo-c10" d="M1039,1709L1061,1687L1071,1663L1098,1644L1127.315,1644L1120,1673.906L1039,1709Z" />
+		</g>
+	</g>
+</svg>
+
+<style>
+	.site-logo {
+		display: block;
+		flex: none;
+	}
+
+	path {
+		transition: fill 0.2s ease;
+	}
+
+	.logo-c1 { fill: rgb(var(--logo-c1)); }
+	.logo-c2 { fill: rgb(var(--logo-c2)); }
+	.logo-c3 { fill: rgb(var(--logo-c3)); }
+	.logo-c4 { fill: rgb(var(--logo-c4)); }
+	.logo-c5 { fill: rgb(var(--logo-c5)); }
+	.logo-c6 { fill: rgb(var(--logo-c6)); }
+	.logo-c7 { fill: rgb(var(--logo-c7)); }
+	.logo-c8 { fill: rgb(var(--logo-c8)); }
+	.logo-c9 { fill: rgb(var(--logo-c9)); }
+	.logo-c10 { fill: rgb(var(--logo-c10)); }
+
+	/* Come sul sito: al passaggio del mouse il cigno prende il colore dei link */
+	:global(a:hover) > .site-logo path {
+		fill: var(--link);
+	}
+</style>
